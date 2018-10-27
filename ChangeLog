@@ -1,0 +1,5 @@
+2018-10-27 - 0.0 (Demo) - Luiz Gustavo da Silva Vasconcellos
+
+    * Adicionado campo de Jogo
+    * Adicionados "jogadores" (X e O)
+    * Alternância de turnos
