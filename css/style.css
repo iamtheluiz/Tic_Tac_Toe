@@ -17,62 +17,108 @@ html, *{
 		width: 80vh;
 		height: 80vh;
 		margin-left:calc((100vw - 80vh)/2);
-		margin-top:10vh;
+		margin-top:calc(10vh - 15px);
 	}
 }
 #game{
 	width: 80vh;
-	height: 80vh;
+	height: 80vh;;
+	margin-top:calc(10vh - 15px);
 	margin-left:calc((100vw - 80vh)/2);
-	margin-top:10vh;
 	animation-name:campo_cresce;
 	animation-duration: 1s;
+	background-color: rgba(255,255,255,0.65);
+	padding:15px;
 }
 #game .quadrante{
 	border:4px solid black;
 	width: calc(100%/3 - 8px);
 	height: calc(100%/3 - 8px);
 	float:left;
+	cursor: pointer;
+}
+#game .quadrante[content="x"], #game .quadrante[content="o"]{
+	cursor: auto !important;
+}
+/*Indicador da Vez*/
+@keyframes blue_init{
+	from{
+		background-color: white;
+	}
+	to{
+		background-color: blue;
+	}
+}
+@keyframes blue_player{
+	from{
+		background-color: red;
+	}
+	to{
+		background-color: blue;
+	}
+}
+@keyframes red_player{
+	from{
+		background-color: blue;
+	}
+	to{
+		background-color: red;
+	}
+}
+.blue_init{
+	background-color: blue;
+	animation-name: blue_init;
+	animation-duration: 1.5s;
+}
+.blue_player{
+	background-color: blue;
+	animation-name: blue_player;
+	animation-duration: 1s;
+}
+.red_player{
+	background-color: red;
+	animation-name: red_player;
+	animation-duration: 1s;
 }
 /*Retira as bordas desnecessárias*/
-.quadrante[x="1"][y="1"]{
+.quadrante[id="1_1"]{
 	border-left:0px solid black !important;
 	border-top:0px solid black !important;
 	margin-left:4px;
 	margin-top:4px;
 }
-.quadrante[x="2"][y="1"]{
+.quadrante[id="2_1"]{
 	border-top:0px solid black !important;
 	margin-top:4px;
 }
-.quadrante[x="3"][y="1"]{
+.quadrante[id="3_1"]{
 	border-right:0px solid black !important;
 	border-top:0px solid black !important;
 	margin-right:4px;
 	margin-top:4px;
 }
-.quadrante[x="1"][y="2"]{
+.quadrante[id="1_2"]{
 	border-left:0px solid black !important;
 	margin-left:4px;
 }
-.quadrante[x="2"][y="2"]{
+.quadrante[id="2_2"]{
 	
 }
-.quadrante[x="3"][y="2"]{
+.quadrante[id="3_2"]{
 	border-right:0px solid black !important;
 	margin-right:4px;
 }
-.quadrante[x="1"][y="3"]{
+.quadrante[id="1_3"]{
 	border-left:0px solid black !important;
 	border-bottom:0px solid black !important;
 	margin-left:4px;
 	margin-bottom:4px;
 }
-.quadrante[x="2"][y="3"]{
+.quadrante[id="2_3"]{
 	border-bottom:0px solid black !important;
 	margin-bottom:4px;
 }
-.quadrante[x="3"][y="3"]{
+.quadrante[id="3_3"]{
 	border-right:0px solid black !important;
 	border-bottom:0px solid black !important;
 	margin-right:4px;
