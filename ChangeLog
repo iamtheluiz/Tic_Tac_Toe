@@ -1,3 +1,9 @@
+2018-10-27 - 0.1 (Demo) - Luiz Gustavo da Silva Vasconcellos
+
+    * Adicionado fundo colorido, que alterna conforme o turno
+    * Alterada cor do campo
+    * Adicionada verificação de vencedor e recarregamento da página
+
 2018-10-27 - 0.0 (Demo) - Luiz Gustavo da Silva Vasconcellos
 
     * Adicionado campo de Jogo
