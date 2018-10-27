@@ -75,12 +75,22 @@ function verificar_jogo(){
 		console.log(vencedor);
 		terminar_jogo(vencedor);
 	}
+
+	//Jogo deu velha
+	if(qt_clicados == 9){
+		console.log(vencedor);
+		terminar_jogo("velha");
+	}
 	
 }
 function terminar_jogo(vencedor){
 	st_jogo = false;
 	setTimeout(function(){
-		alert("O jogo acabou! \nO vencedor é "+vencedor);
+		if(vencedor == "velha"){
+			alert("O jogo acabou! \nDeu velha!!");
+		}else{
+			alert("O jogo acabou! \nO vencedor é "+vencedor);
+		}
 		setTimeout(function(){
 			window.location = "index.html";
 		},500);
