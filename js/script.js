@@ -45,8 +45,8 @@ function verificar_jogo(){
 			}
 		}
 	}
-	console.clear();
-	console.table(campos);
+	//console.clear();
+	//console.table(campos);
 
 	//Verifica as horizontais
 	if(campos[1][1] == campos[1][2] && campos[1][1] == campos[1][3] && campos[1][1] != false){
@@ -72,11 +72,11 @@ function verificar_jogo(){
 	}
 
 	if(vencedor != ''){
-		console.log(vencedor);
+		//console.log(vencedor);
 		terminar_jogo(vencedor);
 	}else if(qt_clicados == 9){
 		//Jogo deu velha
-		console.log(vencedor);
+		//console.log(vencedor);
 		terminar_jogo("velha");
 	}
 	
