@@ -5,11 +5,17 @@ var turno = "x";
 
 //Função de click
 function fazer_jogada(isto){
-	if(turno == "x"){
-		isto.innerHTML = "<div class='close'></div>";
-		turno = "o";
+	//Verifica se o campo já foi selecionado
+	if(isto.innerHTML == ""){
+		//Campo não foi selecionado
+		if(turno == "x"){
+			isto.innerHTML = "<div class='close'></div>";
+			turno = "o";
+		}else{
+			isto.innerHTML = "<div class='circle'></div>";
+			turno = "x";
+		}
 	}else{
-		isto.innerHTML = "<div class='circle'></div>";
-		turno = "x";
+		//Campo já foi selecionado
 	}
 }
