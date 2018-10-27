@@ -74,10 +74,8 @@ function verificar_jogo(){
 	if(vencedor != ''){
 		console.log(vencedor);
 		terminar_jogo(vencedor);
-	}
-
-	//Jogo deu velha
-	if(qt_clicados == 9){
+	}else if(qt_clicados == 9){
+		//Jogo deu velha
 		console.log(vencedor);
 		terminar_jogo("velha");
 	}
